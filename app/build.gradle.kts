@@ -36,7 +36,6 @@ android {
     }
     buildFeatures {
         compose = true
-        dataBinding = true
     }
 }
 
@@ -60,4 +59,6 @@ dependencies {
     implementation (libs.androidx.cardview)
     implementation (libs.androidx.appcompat)
     implementation (libs.androidx.core.splashscreen)
+    implementation ("androidx.core:core-splashscreen:1.0.1")
+
 }
