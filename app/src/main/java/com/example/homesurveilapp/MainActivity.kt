@@ -1,47 +1,61 @@
+// eu quero que configures bem este main activity para poder usar o spashactivity ao abrir a app. nao adicionaes nada na pagina depois de abrir o splashactivity. eu apenas quero que o splash abra
 package com.example.homesurveilapp
-
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.homesurveilapp.ui.theme.HomeSurveilAppTheme
+import androidx.appcompat.app.AppCompatActivity
+import com.example.homesurveilapp.databinding.ActivityMainBinding
+import android.os.Handler
+import android.os.Looper
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            HomeSurveilAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // Inicia o SplashActivity ao abrir o MainActivity
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this, SplashActivity::class.java))
+            finish()
+        }, 5000) // 5 segundos
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    HomeSurveilAppTheme {
-        Greeting("Android")
+    override fun onDestroy() {
+        super.onDestroy()
+        // Libera recursos, se necessário
     }
 }
+// Não há necessidade de adicionar nada na página após abrir o SplashActivity
+// O SplashActivity será responsável por exibir a tela de carregamento
+// e redirecionar para o MainActivity após o tempo especificado.
+// Certifique-se de que o SplashActivity esteja configurado corretamente no AndroidManifest.xml
+// para ser a atividade inicial da aplicação.
+// No AndroidManifest.xml, defina o SplashActivity como a atividade inicial:
+// <activity android:name=".SplashActivity">
+//     <intent-filter>
+//         <action android:name="android.intent.action.MAIN" />
+//         <category android:name="android.intent.category.LAUNCHER" />
+//     </intent-filter>
+// </activity>
+// Certifique-se de que o SplashActivity esteja configurado corretamente no AndroidManifest.xml
+// para ser a atividade inicial da aplicação.
+
+// No AndroidManifest.xml, defina o SplashActivity como a atividade inicial:
+// <activity android:name=".SplashActivity">
+//     <intent-filter>
+//         <action android:name="android.intent.action.MAIN" />
+//         <category android:name="android.intent.category.LAUNCHER" />
+//     </intent-filter>
+// </activity>
+// Certifique-se de que o SplashActivity esteja configurado corretamente no AndroidManifest.xml
+// para ser a atividade inicial da aplicação.
+// No AndroidManifest.xml, defina o SplashActivity como a atividade inicial:
+// <activity android:name=".SplashActivity">
+//     <intent-filter>
+//         <action android:name="android.intent.action.MAIN" />
+
+
+
