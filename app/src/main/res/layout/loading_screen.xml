@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ICON"
+            android:src="@drawable/icon"
             android:scaleType="centerCrop" />
     </androidx.cardview.widget.CardView>
 
@@ -28,10 +28,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="HomeSurveilApp™ 2025"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:gravity="center"
         android:layout_gravity="bottom"
         android:layout_marginTop="32dp"
-        android:layout_marginBottom="24dp" />
-
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/system_control_normal_light"
+        />
 </LinearLayout>
