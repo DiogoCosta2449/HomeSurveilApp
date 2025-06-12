@@ -11,4 +11,57 @@
         android:layout_height="260dp"
         android:src="@drawable/icon" />
 
+
+    <TextView
+
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="60sp"
+        android:background="@android:color/transparent"
+        android:paddingBottom="8dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:text="Utilizadores" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@android:color/black"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:text="Antónia" />
+
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:text="Ricardo" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:text="Mariana" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="@android:color/white"
+        android:background="@android:color/black"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"/>
+
+
 </LinearLayout>
