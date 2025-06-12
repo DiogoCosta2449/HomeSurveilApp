@@ -30,6 +30,10 @@
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/app_name" />
+
+        <activity android:name=".UserAntonia" />
+        <activity android:name=".UserMariana" />
+
     </application>
 
 </manifest>
