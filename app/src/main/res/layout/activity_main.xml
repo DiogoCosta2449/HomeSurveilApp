@@ -12,45 +12,103 @@
         android:src="@drawable/icon" />
 
 
-    <TextView
 
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="60sp"
-        android:background="@android:color/transparent"
-        android:paddingBottom="8dp"
-        android:layout_marginBottom="4dp"
-        android:gravity="center"
-        android:text="Utilizadores" />
+        android:text="Utilizadores"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="32dp" />
+
+    <!-- Divider -->
     <View
         android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:background="@android:color/black"
-        android:layout_marginBottom="5dp"/>
+        android:layout_height="2dp"
+        android:layout_marginTop="4dp"
+        android:background="#000000"
+        android:layout_marginBottom="16dp" />
 
-    <Button
-        android:id="@+id/button4"
+    <!-- Lista de usuários -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:text="Antónia" />
+        android:orientation="vertical">
 
+        <!-- Antónia -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
 
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_user"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="User Icon" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:text="Ricardo" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Antónia"
+                android:textSize="28sp"
+                android:textColor="#000000" />
+        </LinearLayout>
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:text="Mariana" />
+        <!-- Ricardo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_user"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="User Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ricardo"
+                android:textSize="28sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Mariana -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_user"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="User Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mariana"
+                android:textSize="28sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/buttonRegister"
