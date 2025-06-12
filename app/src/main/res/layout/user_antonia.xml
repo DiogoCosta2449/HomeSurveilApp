@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <!-- Botão Definições (engrenagem no canto superior direito) -->
+        <ImageView
+            android:id="@+id/settingsButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_settings"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:contentDescription="Definições" />
+
+        <!-- Ícone com letra A -->
+        <TextView
+            android:id="@+id/avatarCircle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_dark"
+            android:text="A"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp" />
+
+        <!-- Nome da pessoa -->
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Antónia"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_toEndOf="@id/avatarCircle"
+            android:layout_alignTop="@id/avatarCircle"
+            android:layout_marginStart="12dp" />
+
+        <!-- Linha preta abaixo do nome -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000000"
+            android:layout_below="@id/avatarCircle"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp" />
+
+        <!-- Sala de Estar -->
+        <TextView
+            android:id="@+id/locationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sala de Estar"
+            android:textSize="22sp"
+            android:textColor="#000000"
+            android:layout_below="@id/avatarCircle"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp" />
+
+        <!-- Indicador LIVE -->
+        <TextView
+            android:id="@+id/liveLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="• LIVE"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:background="#FF0000"
+            android:padding="8dp"
+            android:layout_below="@id/locationText"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp" />
+
+        <!-- Placeholder da Imagem (substituires pela imagem da idosa depois) -->
+        <FrameLayout
+            android:id="@+id/liveVideoPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/liveLabel"
+            android:layout_margin="24dp"
+            android:background="#DDDDDD" />
+
+        <!-- Botões inferiores -->
+        <LinearLayout
+            android:id="@+id/actionButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="32dp">
+
+            <!-- Gravar -->
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/oval_button"
+                android:src="@drawable/ic_record"
+                android:padding="18dp"
+                android:contentDescription="Gravar" />
+
+            <!-- Microfone -->
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/oval_button"
+                android:src="@drawable/ic_mic"
+                android:padding="18dp"
+                android:contentDescription="Microfone" />
+
+            <!-- Câmara -->
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/oval_button"
+                android:src="@drawable/ic_camera"
+                android:padding="18dp"
+                android:contentDescription="Câmara" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
