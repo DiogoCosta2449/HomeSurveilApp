@@ -14,7 +14,6 @@
             android:id="@+id/settingsButton"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:src="@drawable/ic_settings"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_margin="16dp"
@@ -25,7 +24,6 @@
             android:id="@+id/avatarCircle"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:background="@drawable/circle_dark"
             android:text="A"
             android:textColor="#FFFFFF"
             android:gravity="center"
@@ -107,8 +105,6 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="8dp"
-                android:background="@drawable/oval_button"
-                android:src="@drawable/ic_record"
                 android:padding="18dp"
                 android:contentDescription="Gravar" />
 
@@ -117,8 +113,6 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="8dp"
-                android:background="@drawable/oval_button"
-                android:src="@drawable/ic_mic"
                 android:padding="18dp"
                 android:contentDescription="Microfone" />
 
@@ -127,8 +121,6 @@
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="8dp"
-                android:background="@drawable/oval_button"
-                android:src="@drawable/ic_camera"
                 android:padding="18dp"
                 android:contentDescription="Câmara" />
         </LinearLayout>
