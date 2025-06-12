@@ -47,12 +47,12 @@
             android:gravity="center_vertical"
             android:layout_marginBottom="16dp">
 
+
             <ImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/ic_user"
                 android:layout_marginEnd="16dp"
-                android:contentDescription="User Icon" />
+                android:contentDescription="User Icon"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -73,7 +73,6 @@
             <ImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/ic_user"
                 android:layout_marginEnd="16dp"
                 android:contentDescription="User Icon" />
 
@@ -96,7 +95,6 @@
             <ImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@drawable/ic_user"
                 android:layout_marginEnd="16dp"
                 android:contentDescription="User Icon" />
 

@@ -3,13 +3,12 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <?xml version="1.0" encoding="utf-8"?>
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFFFF">
 
-        <!-- Botão Definições (engrenagem no canto superior direito) -->
         <ImageView
             android:id="@+id/settingsButton"
             android:layout_width="32dp"
@@ -19,7 +18,6 @@
             android:layout_margin="16dp"
             android:contentDescription="Definições" />
 
-        <!-- Ícone com letra A -->
         <TextView
             android:id="@+id/avatarCircle"
             android:layout_width="48dp"
@@ -32,7 +30,6 @@
             android:layout_marginTop="24dp"
             android:layout_marginStart="24dp" />
 
-        <!-- Nome da pessoa -->
         <TextView
             android:id="@+id/nameText"
             android:layout_width="wrap_content"
@@ -45,7 +42,6 @@
             android:layout_alignTop="@id/avatarCircle"
             android:layout_marginStart="12dp" />
 
-        <!-- Linha preta abaixo do nome -->
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -55,7 +51,6 @@
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp" />
 
-        <!-- Sala de Estar -->
         <TextView
             android:id="@+id/locationText"
             android:layout_width="wrap_content"
@@ -67,7 +62,6 @@
             android:layout_marginTop="24dp"
             android:layout_marginStart="24dp" />
 
-        <!-- Indicador LIVE -->
         <TextView
             android:id="@+id/liveLabel"
             android:layout_width="wrap_content"
@@ -81,7 +75,6 @@
             android:layout_marginTop="16dp"
             android:layout_marginStart="24dp" />
 
-        <!-- Placeholder da Imagem (substituires pela imagem da idosa depois) -->
         <FrameLayout
             android:id="@+id/liveVideoPlaceholder"
             android:layout_width="match_parent"
@@ -90,7 +83,6 @@
             android:layout_margin="24dp"
             android:background="#DDDDDD" />
 
-        <!-- Botões inferiores -->
         <LinearLayout
             android:id="@+id/actionButtons"
             android:layout_width="match_parent"
@@ -100,7 +92,6 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="32dp">
 
-            <!-- Gravar -->
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -108,7 +99,6 @@
                 android:padding="18dp"
                 android:contentDescription="Gravar" />
 
-            <!-- Microfone -->
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -116,7 +106,6 @@
                 android:padding="18dp"
                 android:contentDescription="Microfone" />
 
-            <!-- Câmara -->
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="72dp"
@@ -125,5 +114,4 @@
                 android:contentDescription="Câmara" />
         </LinearLayout>
     </RelativeLayout>
-
 </LinearLayout>
