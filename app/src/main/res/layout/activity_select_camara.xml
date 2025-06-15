@@ -1,101 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#FFFFFF"
-    android:gravity="center">
+    android:background="#FFFFFF">
 
-    <!-- Cabeçalho "Mariana" -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="48dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/nome_sublinhado"
-        android:gravity="center"/>
+    <!-- Botão de Definições no canto superior direito -->
+    <ImageButton
+        android:id="@+id/btnDefinicoes"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/Definições"
+        android:background="@android:color/transparent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:contentDescription="Botão de definições"/>
 
-    <!-- Container principal para os itens -->
+    <!-- Conteúdo principal centralizado -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginTop="8dp">
+        android:layout_below="@id/btnDefinicoes">
 
-        <!-- Item Escritório -->
-        <LinearLayout
+        <!-- Cabeçalho "Mariana" -->
+        <TextView
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="48dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/nome_sublinhado"
+            android:gravity="center"/>
+
+        <!-- Container principal para os itens -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginBottom="40dp">
+            android:layout_marginTop="8dp">
 
-            <TextView
+            <!-- Item Escritório -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Escritório"
-                android:textSize="24sp"
-                android:textColor="#000000"
-                android:layout_marginBottom="16dp"/>
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="40dp">
 
-            <ImageView
-                android:layout_width="330dp"
-                android:layout_height="150dp"
-                android:src="@drawable/Escritorio"
-                android:contentDescription="Imagem do escritório"
-                android:scaleType="centerCrop"/>
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Escritório"
+                    android:textSize="24sp"
+                    android:textColor="#000000"
+                    android:layout_marginBottom="16dp"/>
 
-        <!-- Item Sala de estar -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginBottom="40dp">
+                <ImageView
+                    android:layout_width="330dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/Escritorio"
+                    android:contentDescription="Imagem do escritório"
+                    android:scaleType="centerCrop"/>
+            </LinearLayout>
 
-            <TextView
+            <!-- Item Sala de estar -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sala de estar"
-                android:textSize="24sp"
-                android:textColor="#000000"
-                android:layout_marginBottom="16dp"/>
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="40dp">
 
-            <ImageView
-                android:layout_width="330dp"
-                android:layout_height="150dp"
-                android:src="@drawable/SalaDeEstar"
-                android:contentDescription="Imagem da sala de estar"
-                android:scaleType="centerCrop"/>
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sala de estar"
+                    android:textSize="24sp"
+                    android:textColor="#000000"
+                    android:layout_marginBottom="16dp"/>
 
-        <!-- Item Quintal -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+                <ImageView
+                    android:layout_width="330dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/SalaDeEstar"
+                    android:contentDescription="Imagem da sala de estar"
+                    android:scaleType="centerCrop"/>
+            </LinearLayout>
 
-            <TextView
+            <!-- Item Quintal -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Quintal"
-                android:textSize="24sp"
-                android:textColor="#000000"
-                android:layout_marginBottom="16dp"/>
+                android:orientation="vertical"
+                android:gravity="center">
 
-            <ImageView
-                android:layout_width="330dp"
-                android:layout_height="150dp"
-                android:src="@drawable/Quintal"
-                android:contentDescription="Imagem do quintal"
-                android:scaleType="centerCrop"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quintal"
+                    android:textSize="24sp"
+                    android:textColor="#000000"
+                    android:layout_marginBottom="16dp"/>
+
+                <ImageView
+                    android:layout_width="330dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/Quintal"
+                    android:contentDescription="Imagem do quintal"
+                    android:scaleType="centerCrop"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

@@ -23,7 +23,7 @@
             android:layout_marginBottom="16dp"
             android:contentDescription="Definições"
             android:scaleType="centerCrop"
-            android:src="@drawable/image" />
+            android:src="@drawable/Definições" />
 
         <TextView
             android:id="@+id/avatarCircle"
