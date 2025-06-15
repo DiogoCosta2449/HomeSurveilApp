@@ -63,12 +63,14 @@
                     android:textColor="#000000"
                     android:textSize="24sp" />
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btnEscritorio"
                     android:layout_width="330dp"
                     android:layout_height="150dp"
                     android:contentDescription="Office image"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/escritorio" />
+                    android:src="@drawable/escritorio"
+                    android:background="?android:attr/selectableItemBackgroundBorderless" />
             </LinearLayout>
 
             <!-- Living Room Item -->
@@ -87,12 +89,14 @@
                     android:textColor="#000000"
                     android:textSize="24sp" />
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btnSalaDeEstar"
                     android:layout_width="330dp"
                     android:layout_height="150dp"
                     android:contentDescription="Living room image"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/saladeestar" />
+                    android:src="@drawable/saladeestar"
+                    android:background="?android:attr/selectableItemBackgroundBorderless" />
             </LinearLayout>
 
             <!-- Backyard Item -->
@@ -110,12 +114,14 @@
                     android:textColor="#000000"
                     android:textSize="24sp" />
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/btnQuintal"
                     android:layout_width="330dp"
                     android:layout_height="150dp"
                     android:contentDescription="Backyard image"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/quintal" />
+                    android:src="@drawable/quintal"
+                    android:background="?android:attr/selectableItemBackgroundBorderless" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

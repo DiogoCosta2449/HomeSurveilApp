@@ -34,6 +34,7 @@
         <activity android:name=".camara" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".SettingsScreen" />
+        <activity android:name=".SelectCamara" />
 
     </application>
 

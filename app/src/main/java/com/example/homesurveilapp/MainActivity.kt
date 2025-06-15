@@ -16,6 +16,23 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val layoutAntonia = findViewById<android.widget.LinearLayout>(R.id.layoutAntonia)
+        layoutAntonia.setOnClickListener {
+            val intent = Intent(this, SelectCamara::class.java)
+            startActivity(intent)
+        }
+
+        val layoutRicardo = findViewById<android.widget.LinearLayout>(R.id.layoutRicardo)
+        layoutRicardo.setOnClickListener {
+            val intent = Intent(this, SelectCamara::class.java)
+            startActivity(intent)
+        }
+
+        val layoutMariana = findViewById<android.widget.LinearLayout>(R.id.layoutMariana)
+        layoutMariana.setOnClickListener {
+            val intent = Intent(this, SelectCamara::class.java)
+            startActivity(intent)
+        }
 
         }
 }
