@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,7 +10,7 @@
         android:layout_height="match_parent"
         android:background="#FFFFFF">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/settingsButton"
             android:layout_width="52dp"
             android:layout_height="44dp"
@@ -23,7 +24,9 @@
             android:layout_marginBottom="16dp"
             android:contentDescription="Definições"
             android:scaleType="centerCrop"
-            android:src="@drawable/definicoes" />
+            android:src="@drawable/Definições"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+        ```
 
         <TextView
             android:id="@+id/avatarCircle"
@@ -88,37 +91,47 @@
             android:layout_height="250dp"
             android:layout_below="@id/liveLabel"
             android:layout_margin="24dp"
-            android:background="#DDDDDD" />
+            android:background="#DDDDDD" >
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/SalaDeEstar" />
+        </FrameLayout>
 
         <LinearLayout
             android:id="@+id/actionButtons"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
+            android:layout_height="121dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="32dp">
+            android:layout_marginBottom="132dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="8dp"
+                android:contentDescription="Gravar"
                 android:padding="18dp"
-                android:contentDescription="Gravar" />
+                android:src="@drawable/Camara" />
 
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="8dp"
+                android:contentDescription="Microfone"
                 android:padding="18dp"
-                android:contentDescription="Microfone" />
+                android:src="@drawable/Microfone" />
 
             <ImageView
                 android:layout_width="72dp"
                 android:layout_height="72dp"
                 android:layout_margin="8dp"
+                android:contentDescription="Câmara"
                 android:padding="18dp"
-                android:contentDescription="Câmara" />
+                android:src="@drawable/Screenshot" />
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>
