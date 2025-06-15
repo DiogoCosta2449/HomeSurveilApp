@@ -3,9 +3,9 @@ package com.example.homesurveilapp
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class UserMariana : AppCompatActivity() {
+class camara : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.user_mariana)
+        setContentView(R.layout.camara)
     }
 }

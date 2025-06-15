@@ -12,13 +12,13 @@ class MainActivity : AppCompatActivity() {
 
         val layoutAntonia = findViewById<android.widget.LinearLayout>(R.id.layoutAntonia)
         layoutAntonia.setOnClickListener {
-            val intent = Intent(this, UserAntonia::class.java)
+            val intent = Intent(this, camara::class.java)
             startActivity(intent)
         }
 
         val layoutMariana = findViewById<android.widget.LinearLayout>(R.id.layoutMariana)
         layoutAntonia.setOnClickListener {
-            val intent = Intent(this, UserAntonia::class.java)
+            val intent = Intent(this, camara::class.java)
             startActivity(intent)
         }
     }
