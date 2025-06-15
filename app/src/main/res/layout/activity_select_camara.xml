@@ -4,116 +4,118 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <!-- Botão de Definições no canto superior direito -->
+    <!-- Settings ImageButton in top right corner -->
     <ImageButton
-        android:id="@+id/btnDefinicoes"
+        android:id="@+id/settingsButton"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:src="@drawable/Definições"
-        android:background="@android:color/transparent"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
-        android:contentDescription="Botão de definições"/>
+        android:contentDescription="Settings button"
+        android:scaleType="fitCenter"
+        android:src="@drawable/definicoes"
+        android:background="?android:attr/selectableItemBackgroundBorderless" />
 
-    <!-- Conteúdo principal centralizado -->
+    <!-- Main content centered -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_below="@id/settingsButton"
+        android:layout_marginTop="-64dp"
         android:gravity="center"
-        android:layout_below="@id/btnDefinicoes">
+        android:orientation="vertical">
 
-        <!-- Cabeçalho "Mariana" -->
+        <!-- Header "Mariana" -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:textSize="32sp"
-            android:textStyle="bold"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="48dp"
+            android:gravity="center"
+            android:text="Nome da pessoa"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/nome_sublinhado"
-            android:gravity="center"/>
+            android:textColor="#000000"
+            android:textSize="32sp"
+            android:textStyle="bold" />
 
-        <!-- Container principal para os itens -->
+        <!-- Main items container -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginTop="8dp"
             android:gravity="center"
-            android:layout_marginTop="8dp">
+            android:orientation="vertical">
 
-            <!-- Item Escritório -->
+            <!-- Office Item -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_marginBottom="40dp"
                 android:gravity="center"
-                android:layout_marginBottom="40dp">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:text="Escritório"
-                    android:textSize="24sp"
                     android:textColor="#000000"
-                    android:layout_marginBottom="16dp"/>
+                    android:textSize="24sp" />
 
                 <ImageView
                     android:layout_width="330dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/Escritorio"
-                    android:contentDescription="Imagem do escritório"
-                    android:scaleType="centerCrop"/>
+                    android:contentDescription="Office image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/escritorio" />
             </LinearLayout>
 
-            <!-- Item Sala de estar -->
+            <!-- Living Room Item -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:layout_marginBottom="40dp"
                 android:gravity="center"
-                android:layout_marginBottom="40dp">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:text="Sala de estar"
-                    android:textSize="24sp"
                     android:textColor="#000000"
-                    android:layout_marginBottom="16dp"/>
+                    android:textSize="24sp" />
 
                 <ImageView
                     android:layout_width="330dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/SalaDeEstar"
-                    android:contentDescription="Imagem da sala de estar"
-                    android:scaleType="centerCrop"/>
+                    android:contentDescription="Living room image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/saladeestar" />
             </LinearLayout>
 
-            <!-- Item Quintal -->
+            <!-- Backyard Item -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:text="Quintal"
-                    android:textSize="24sp"
                     android:textColor="#000000"
-                    android:layout_marginBottom="16dp"/>
+                    android:textSize="24sp" />
 
                 <ImageView
                     android:layout_width="330dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/Quintal"
-                    android:contentDescription="Imagem do quintal"
-                    android:scaleType="centerCrop"/>
+                    android:contentDescription="Backyard image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/quintal" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

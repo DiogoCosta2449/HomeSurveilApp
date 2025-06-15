@@ -1,6 +1,6 @@
+package com.example.homesurveilapp
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.homesurveilapp.R
 
 class SettingsScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

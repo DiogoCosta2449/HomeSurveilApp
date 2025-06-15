@@ -33,7 +33,8 @@
 
         <activity android:name=".camara" />
         <activity android:name=".RegisterActivity" />
-        }
+        <activity android:name=".SettingsScreen" />
+
     </application>
 
 </manifest>
