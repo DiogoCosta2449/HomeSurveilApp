@@ -10,16 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val layoutAntonia = findViewById<android.widget.LinearLayout>(R.id.layoutAntonia)
-        layoutAntonia.setOnClickListener {
-            val intent = Intent(this, camara::class.java)
+        val registerButton = findViewById<android.widget.Button>(R.id.buttonRegister)
+        registerButton.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
-        val layoutMariana = findViewById<android.widget.LinearLayout>(R.id.layoutMariana)
-        layoutAntonia.setOnClickListener {
-            val intent = Intent(this, camara::class.java)
-            startActivity(intent)
+
         }
-    }
 }
