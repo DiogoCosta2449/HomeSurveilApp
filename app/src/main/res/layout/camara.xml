@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:background="#FFFFFF">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/settingsButton"
             android:layout_width="52dp"
             android:layout_height="44dp"
@@ -24,7 +24,9 @@
             android:layout_marginBottom="16dp"
             android:contentDescription="Definições"
             android:scaleType="centerCrop"
-            android:src="@drawable/Definições" />
+            android:src="@drawable/Definições"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+        ```
 
         <TextView
             android:id="@+id/avatarCircle"
@@ -101,9 +103,9 @@
         <LinearLayout
             android:id="@+id/actionButtons"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="121dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="165dp"
+            android:layout_marginBottom="132dp"
             android:gravity="center"
             android:orientation="horizontal">
 
