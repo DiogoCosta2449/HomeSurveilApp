@@ -46,25 +46,6 @@
             android:layout_marginBottom="16dp"
             android:padding="12dp" />
 
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            android:textSize="18sp"
-            android:inputType="textEmailAddress"
-            android:layout_marginBottom="16dp"
-            android:padding="12dp" />
-
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:textSize="18sp"
-            android:inputType="textPassword"
-            android:layout_marginBottom="24dp"
-            android:padding="12dp" />
     </LinearLayout>
 
     <Button
