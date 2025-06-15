@@ -15,11 +15,5 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, camara::class.java)
             startActivity(intent)
         }
-
-        val layoutMariana = findViewById<android.widget.LinearLayout>(R.id.layoutMariana)
-        layoutAntonia.setOnClickListener {
-            val intent = Intent(this, camara::class.java)
-            startActivity(intent)
-        }
     }
 }

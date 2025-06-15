@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">HomeSurveilApp</string>
+
+    <string-array name="tamanhos_array">
+        <item>Pequeno</item>
+        <item>Normal</item>
+        <item>Grande</item>
+    </string-array>
+
 </resources>
