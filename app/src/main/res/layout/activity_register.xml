@@ -26,8 +26,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="32dp"
-        android:padding="16dp" />
-
+        android:padding="16dp">
 
         <EditText
             android:id="@+id/editTextNome"
@@ -47,34 +46,16 @@
             android:layout_marginBottom="16dp"
             android:padding="12dp" />
 
-        <EditText
-            android:id="@+id/editTextEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email"
-            android:textSize="18sp"
-            android:inputType="textEmailAddress"
-            android:layout_marginBottom="16dp"
-            android:padding="12dp" />
-
-        <EditText
-            android:id="@+id/editTextPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:textSize="18sp"
-            android:inputType="textPassword"
-            android:layout_marginBottom="24dp"
-            android:padding="12dp" />
-
-        <Button
-            android:id="@+id/buttonSubmeter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-            android:textSize="18sp"
-            android:textColor="#FFFFFF"
-            android:background="#2E2E2E"
-            android:padding="12dp"
-            android:layout_marginTop="8dp" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSubmeter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:background="#2E2E2E"
+        android:padding="12dp"
+        android:layout_marginTop="8dp" />
+</LinearLayout>
