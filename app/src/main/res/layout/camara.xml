@@ -1,136 +1,270 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F8F8F8">
 
-    <RelativeLayout
+    <!-- Fixed Header - Sala de Estar -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:elevation="4dp">
 
-        <ImageButton
-            android:id="@+id/settingsButton"
-            android:layout_width="52dp"
-            android:layout_height="44dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:contentDescription="Definições"
-            android:scaleType="centerCrop"
-            android:src="@drawable/definicoes"
-            android:background="?attr/selectableItemBackgroundBorderless" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:gravity="center_vertical">
 
-        <TextView
-            android:id="@+id/avatarCircle"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:text="A"
-            android:textColor="#FFFFFF"
-            android:gravity="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"
-            android:layout_marginStart="24dp" />
+            <TextView
+                android:id="@+id/locationText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SALA DE ESTAR"
+                android:textSize="18sp"
+                android:textColor="#444444"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:fontFamily="sans-serif-medium"/>
 
-        <TextView
-            android:id="@+id/nameText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Antónia"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:textColor="#000000"
-            android:layout_toEndOf="@id/avatarCircle"
-            android:layout_alignTop="@id/avatarCircle"
-            android:layout_marginStart="12dp" />
+            <ImageButton
+                android:id="@+id/settingsButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Configurações"
+                android:scaleType="fitCenter"
+                android:src="@drawable/definicoes"
+                android:background="?android:attr/selectableItemBackgroundBorderless"/>
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#000000"
-            android:layout_below="@id/avatarCircle"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp" />
+            android:layout_height="1dp"
+            android:background="#E0E0E0"/>
+    </LinearLayout>
 
-        <TextView
-            android:id="@+id/locationText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sala de Estar"
-            android:textSize="22sp"
-            android:textColor="#000000"
-            android:layout_below="@id/avatarCircle"
-            android:layout_marginTop="24dp"
-            android:layout_marginStart="24dp" />
-
-        <TextView
-            android:id="@+id/liveLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="• LIVE"
-            android:textSize="18sp"
-            android:textColor="#FFFFFF"
-            android:background="#FF0000"
-            android:padding="8dp"
-            android:layout_below="@id/locationText"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="24dp" />
-
-        <FrameLayout
-            android:id="@+id/liveVideoPlaceholder"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_below="@id/liveLabel"
-            android:layout_margin="24dp"
-            android:background="#DDDDDD" >
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/saladeestar" />
-        </FrameLayout>
+    <!-- Main Content - Antónia -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:padding="16dp"
+        android:clipToPadding="false">
 
         <LinearLayout
-            android:id="@+id/actionButtons"
             android:layout_width="match_parent"
-            android:layout_height="121dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="132dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_margin="8dp"
-                android:contentDescription="Gravar"
-                android:padding="18dp"
-                android:src="@drawable/camara" />
+            <!-- Profile Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
 
-            <ImageView
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_margin="8dp"
-                android:contentDescription="Microfone"
-                android:padding="18dp"
-                android:src="@drawable/microfone" />
+                <TextView
+                    android:id="@+id/nameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Antónia"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="sans-serif-medium"/>
+            </LinearLayout>
 
-            <ImageView
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_margin="8dp"
-                android:contentDescription="Câmara"
-                android:padding="18dp"
-                android:src="@drawable/screenshot" />
+            <!-- Live Video Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/mainImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/saladeestar"
+                        android:contentDescription="Sala de estar"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="16dp"
+                        android:background="#FF5252"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="4dp"
+                        android:text="• LIVE"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="36dp"
+                    app:cardElevation="2dp">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Câmera"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/camara" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="36dp"
+                    app:cardElevation="2dp">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Microfone"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/microfone"
+                        android:background="?attr/selectableItemBackgroundBorderless"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="36dp"
+                    app:cardElevation="2dp">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="Captura"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/screenshot"
+                        android:background="?attr/selectableItemBackgroundBorderless"/>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- Recent Activity -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ATIVIDADE RECENTE"
+                        android:textSize="16sp"
+                        android:textColor="#444444"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="12dp"
+                        android:fontFamily="sans-serif-medium"/>
+
+                    <!-- Activity Items -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <!-- Sample Activity Item 1 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="12dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/not"
+                                android:scaleType="centerInside"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Nova mensagem recebida"
+                                android:textSize="14sp"
+                                android:textColor="#333333"
+                                android:layout_marginStart="12dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="10:30"
+                                android:textSize="12sp"
+                                android:textColor="#888888"/>
+                        </LinearLayout>
+
+                        <!-- Sample Activity Item 2 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/not"
+                                android:scaleType="centerInside"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Dispositivo conectado"
+                                android:textSize="14sp"
+                                android:textColor="#333333"
+                                android:layout_marginStart="12dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="09:15"
+                                android:textSize="12sp"
+                                android:textColor="#888888"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
-    </RelativeLayout>
-</LinearLayout>
+    </ScrollView>
+</RelativeLayout>

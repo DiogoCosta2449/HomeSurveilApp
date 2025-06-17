@@ -1,4 +1,3 @@
-
 package com.example.homesurveilapp
 
 import android.content.Intent
@@ -18,21 +17,24 @@ class MainActivity : AppCompatActivity() {
 
         val layoutAntonia = findViewById<android.widget.LinearLayout>(R.id.layoutAntonia)
         layoutAntonia.setOnClickListener {
-            val intent = Intent(this, SelectCamara::class.java)
-            startActivity(intent)
+            navigateToSelectCamera("Antónia")
         }
 
         val layoutRicardo = findViewById<android.widget.LinearLayout>(R.id.layoutRicardo)
         layoutRicardo.setOnClickListener {
-            val intent = Intent(this, SelectCamara::class.java)
-            startActivity(intent)
+            navigateToSelectCamera("Ricardo")
         }
 
         val layoutMariana = findViewById<android.widget.LinearLayout>(R.id.layoutMariana)
         layoutMariana.setOnClickListener {
-            val intent = Intent(this, SelectCamara::class.java)
-            startActivity(intent)
+            navigateToSelectCamera("Mariana")
         }
+    }
 
+    private fun navigateToSelectCamera(userName: String) {
+        val intent = Intent(this, SelectCamara::class.java).apply {
+            putExtra("SELECTED_USER", userName)
         }
+        startActivity(intent)
+    }
 }

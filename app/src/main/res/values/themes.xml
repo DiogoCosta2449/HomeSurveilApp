@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-
-    <!-- Tema principal da app compatível com AppCompatActivity -->
-    <style name="Theme.HomeSurveilApp" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <!-- Tema principal -->
+    <style name="Theme.HomeSurveilApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
+        <item name="colorSecondary">@color/teal_200</item>
         <item name="android:windowBackground">@color/white</item>
+        <item name="textInputStyle">@style/Widget.HomeSurveilApp.TextInputLayout.OutlinedBox</item>
     </style>
 
-    <!-- Tema usado para a SplashActivity -->
+    <!-- Tema para SplashScreen -->
     <style name="Theme.Splash" parent="Theme.HomeSurveilApp">
         <item name="android:windowBackground">@color/white</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <!-- Estilo para TextInputLayout -->
+    <style name="Widget.HomeSurveilApp.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/gray_300</item>
+        <item name="hintTextColor">@color/gray_500</item>
+        <item name="android:textColorHint">@color/gray_500</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.HomeSurveilApp.TextInputEditText</item>
+    </style>
+
+    <!-- ThemeOverlay para TextInputEditText -->
+    <style name="ThemeOverlay.HomeSurveilApp.TextInputEditText" parent="">
+        <item name="editTextStyle">@style/Widget.HomeSurveilApp.TextInputEditText</item>
+    </style>
+
+    <!-- Estilo para TextInputEditText -->
+    <style name="Widget.HomeSurveilApp.TextInputEditText" parent="">
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
 </resources>
