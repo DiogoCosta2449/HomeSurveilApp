@@ -1,15 +1,18 @@
 <resources>
     <string name="app_name">HomeSurveilApp</string>
 
-        <string-array name="tamanhos_array">
-            <item>Pequeno</item>
-            <item>Médio</item>
-            <item>Grande</item>
-        </string-array>
+    <string-array name="tamanhos_array">
+        <item>Pequeno</item>
+        <item>Médio</item>
+        <item>Grande</item>
+    </string-array>
 
-        <string-array name="temas_array">
-            <item>Claro</item>
-            <item>Escuro</item>
-            <item>Sistema</item>
-        </string-array>
-    </resources>
+    <string-array name="temas_array">
+        <item>Claro</item>
+        <item>Escuro</item>
+        <item>Sistema</item>
+    </string-array>
+
+    <string name="high_contrast_label">Modo de Alto Contraste</string>
+    <string name="high_contrast_summary">Aumenta o contraste para melhor visibilidade</string>
+</resources>

@@ -38,6 +38,29 @@
             android:entries="@array/tamanhos_array"/>
     </LinearLayout>
 
+    <!-- ICONS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tamanho de Icons:"
+            android:textSize="18sp"
+            android:layout_marginEnd="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerTamanho"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/tamanhos_array"/>
+    </LinearLayout>
+
     <!-- Tema -->
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,5 +82,27 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:entries="@array/temas_array"/>
+    </LinearLayout>
+
+    <!-- Alto Contraste -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/high_contrast_label"
+            android:textSize="18sp"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchHighContrast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"/>
     </LinearLayout>
 </LinearLayout>
